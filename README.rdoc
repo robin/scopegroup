@@ -2,7 +2,7 @@
 
 ScopeGroup is a Ruby On Rails plugin providing dynamic named_scope grouping.
 
-You can aggregate a group of named scope together during runtime and run them together anytime you want.
+You can aggregate a group of named scope together during runtime and run them together only when methods like 'find', 'count', 'average', etc are called.
 
 = Install
 
