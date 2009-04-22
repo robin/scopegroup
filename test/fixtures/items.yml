@@ -1,0 +1,28 @@
+one:
+  id: 1
+  name: one
+  price: 1.00
+  is_active: true
+  created_at: <%= 6.hours.ago.to_s(:db) %>
+  updated_at: <%= 3.hours.ago.to_s(:db) %>
+two:
+  id: 2
+  name: two
+  price: 2.00
+  is_active: true
+  created_at: <%= 10.hours.ago.to_s(:db) %>
+  updated_at: <%= 2.hours.ago.to_s(:db) %>
+three:
+  id: 3
+  name: three
+  price: 3.00
+  is_active: false
+  created_at: <%= 6.hours.ago.to_s(:db) %>
+  updated_at: <%= 3.hours.ago.to_s(:db) %>
+four:
+  id: 4
+  name: four
+  price: 4.00
+  is_active: false
+  created_at: <%= 10.hours.ago.to_s(:db) %>
+  updated_at: <%= 2.hours.ago.to_s(:db) %>  

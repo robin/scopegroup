@@ -1,0 +1,36 @@
+= ScopeGroup
+
+ScopeGroup is a Ruby On Rails plugin providing dynamic named_scope grouping.
+
+You can aggregate a group of named scope together during runtime and run them together anytime you want.
+
+= Example
+
+Suppose Post is an activerecord model:
+  
+  scope_group = ScopeGroup.new Post
+  scope_group.named_scope1
+  scope_group.named_scope2(1)
+  scope_group.find(:all)
+
+is equivalent to:
+  
+  Post.named_scope1.named_scope2(1)
+
+You can also use append_scope as:
+    
+  scope_group = ScopeGroup.new Post
+  scope_group.append_scope :named_scope1
+  scope_group.append_scope :named_scope2, 1
+  scope_group.count
+
+, which is equivalent to:
+
+  Post.named_scope1.named_scope2(1).count
+
+== Author
+
+Author::             Robin Lu @ IN-SRC Studio
+Company Web Site::   http://www.in-src.com
+
+Copyright (c) 2009 Robin Lu @ IN-SRC Studio , released under the MIT license
