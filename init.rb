@@ -1,2 +1,2 @@
 # Include hook code here
-require 'scope_gruop'
+require 'scope_group'

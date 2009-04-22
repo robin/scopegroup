@@ -4,6 +4,10 @@ ScopeGroup is a Ruby On Rails plugin providing dynamic named_scope grouping.
 
 You can aggregate a group of named scope together during runtime and run them together anytime you want.
 
+= Install
+
+  script/plugin install git://github.com/robin/scopegroup.git
+
 = Example
 
 Suppose Post is an activerecord model:
