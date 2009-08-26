@@ -39,7 +39,7 @@ class ScopeGroup
   
   def method_missing(method, *args, &block)
     unless @klass.scopes.include?(method)
-      @klass.run_scope_group(@group.dup).send(method, args)
+      @klass.run_scope_group(@group.dup).send(method, *args)
     else
       @group << [method, args]
     end
