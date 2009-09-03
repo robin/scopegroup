@@ -12,9 +12,9 @@ module ActiveRecord
         def run_scope_group(groups)
           scope = groups.shift
           if groups.empty?
-              self.send(scope[0], scope[1])
+              self.send(scope[0], *scope[1])
           else
-            with_scope :find => self.send(scope[0], scope[1]).proxy_options do
+            with_scope :find => self.send(scope[0], *scope[1]).proxy_options do
               run_scope_group(groups)
             end
           end
